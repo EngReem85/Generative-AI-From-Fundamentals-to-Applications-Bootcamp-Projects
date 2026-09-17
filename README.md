@@ -2,128 +2,126 @@
 
 A collection of practical projects and hands-on labs developed during the **Generative AI: From Fundamentals to Applications** bootcamp.
 
-This repository provides participants with a practical reference to revisit the projects, explore the implementations, and continue experimenting after the bootcamp.
+This repository serves as a practical reference for participants to revisit the projects, explore the implementations, and continue experimenting after the bootcamp.
 
 ---
 
 ## 🚀 Projects
 
-### 01. Foundation Models — StudyLens
+### 01. MNIST CNN Classifier
 
-**StudyLens** is a practical application built to demonstrate how a Foundation Model can be used to create a useful AI-powered product.
+A hands-on image classification project using a **Convolutional Neural Network (CNN)** to recognize handwritten digits from the MNIST dataset.
 
-The project focuses on moving beyond simply interacting with a model and using it as part of a functional application.
+This project provides practical experience with building, training, and evaluating a deep learning model.
+
+**Technologies:**
+Python · TensorFlow · Keras · CNN · MNIST
+
+[→ Explore the Project](./MNIST_CNN_Classifier)
+
+---
+
+### 02. RAG — First System Lab
+
+A practical implementation of a **Retrieval-Augmented Generation (RAG)** system, following the complete pipeline from document processing to retrieval, generation, and evaluation.
+
+The project covers document loading and parsing, cleaning, chunking, embeddings, vector indexing, Top-K retrieval, LLM generation, and evaluation.
+
+It also includes different evaluation scenarios such as ambiguous, multi-part, missing-information, outdated, and irrelevant queries.
+
+**Technologies:**
+Python · Embeddings · Vector Search · RAG · LLMs · Streamlit
+
+[→ Explore the Project](./RAG_First_System_Lab/mnt/data/rag_lab)
+
+---
+
+### 03. StudyLens
+
+A practical AI application demonstrating how **Foundation Models** can be used as a core component of a functional product.
+
+The project focuses on moving beyond simply interacting with a model and using its capabilities to build a practical AI-powered application.
 
 **Technologies:**
 Python · Foundation Models · Streamlit
 
-[→ Open Project](./StudyLens)
+[→ Explore the Project](./StudyLens)
 
 ---
 
-### 02. Transformer Lab
+### 04. Transformer Playground
 
-A hands-on implementation exploring the **Transformer architecture** and its core components.
+An interactive project for exploring the **Transformer architecture** and its key concepts through practical experimentation.
 
-The project provides a practical way to experiment with the concepts behind modern Transformer-based models.
+The playground provides a hands-on way to explore how Transformer-based models process and represent information.
 
 **Technologies:**
 Python · Transformers · Deep Learning
 
-[→ Open Project](./Transformer-Lab)
+[→ Explore the Project](./Transformer_Playground)
 
 ---
 
-### 03. RAG — First System
+### 05. BaseAgent — Multi-Agent Research System
 
-A complete practical implementation of a **Retrieval-Augmented Generation (RAG)** system.
+A practical **multi-agent AI system** designed to perform complex research tasks through collaboration between specialized agents.
 
-The project follows the main RAG pipeline:
+The system includes five specialized agents:
 
-**Documents → Processing → Chunking → Embeddings → Vector Search → Retrieval → LLM → Evaluation**
+* **Planner** — breaks complex queries into research plans.
+* **Researcher** — gathers relevant information using web tools.
+* **FactChecker** — verifies claims and sources.
+* **Analyst** — synthesizes findings and insights.
+* **Writer** — produces the final research report.
 
-It also includes different evaluation scenarios to examine retrieval quality, answer grounding, citations, missing information, and irrelevant queries.
+The project demonstrates concepts such as **ReAct loops, tool calling, agent orchestration, parallel execution, observability, loop detection, and cost tracking**.
 
 **Technologies:**
-Python · Embeddings · Vector Search · LLMs · RAG · Streamlit
+Python · LLMs · ReAct · Multi-Agent Systems · LiteLLM · Tools · APIs · Pydantic · Typer
 
-[→ Open Project](./RAG-First-System)
-
----
-
-### 04. AI Tools
-
-A practical application demonstrating how **AI Tools** can extend the capabilities of a model by allowing it to interact with external functions and services.
-
-The project focuses on tool usage rather than building a full autonomous agent.
-
-**Technologies:**
-Python · LLMs · AI Tools · APIs
-
-[→ Open Project](./AI-Tools)
+[→ Explore BaseAgent](https://github.com/EngReem85/BaseAgent)
 
 ---
 
-## 🧭 Learning Journey
+## 🧭 From Fundamentals to Applications
 
-The projects are designed to follow a progression from understanding modern AI models to building practical applications:
+The projects represent a progression from foundational AI and deep learning concepts toward modern Generative AI applications:
 
 ```text
+Deep Learning
+      ↓
 Foundation Models
-        ↓
+      ↓
 Transformers
-        ↓
-LLMs
-        ↓
+      ↓
 RAG
-        ↓
-AI Tools
-        ↓
+      ↓
+AI Agents
+      ↓
 Practical AI Applications
 ```
 
-Each project focuses on **building and experimenting**, rather than reproducing the theoretical training content.
-
----
-
-## 📂 Repository Structure
-
-```text
-Generative-AI-From-Fundamentals-to-Applications-Bootcamp-Projects/
-│
-├── StudyLens/
-│   └── README.md
-│
-├── Transformer-Lab/
-│   └── README.md
-│
-├── RAG-First-System/
-│   └── README.md
-│
-├── AI-Tools/
-│   └── README.md
-│
-├── README.md
-└── LICENSE
-```
-
-Each project contains its own README with the relevant setup instructions, requirements, and implementation details.
+Each project focuses on **hands-on implementation, experimentation, and building functional AI solutions**.
 
 ---
 
 ## 🛠️ Technologies
 
-The projects use a combination of:
+The projects use a range of tools and technologies, including:
 
 * Python
+* TensorFlow & Keras
 * Deep Learning
+* Convolutional Neural Networks (CNNs)
 * Foundation Models
 * Transformers
 * Large Language Models (LLMs)
 * Embeddings
 * Vector Search
 * Retrieval-Augmented Generation (RAG)
-* AI Tools
+* AI Agents
+* ReAct
+* Tool Calling
 * APIs
 * Streamlit
 * Hugging Face
@@ -132,42 +130,52 @@ The projects use a combination of:
 
 ## ▶️ Getting Started
 
-Clone the repository:
+Clone this repository:
 
 ```bash
 git clone https://github.com/EngReem85/Generative-AI-From-Fundamentals-to-Applications-Bootcamp-Projects.git
 ```
 
-Then navigate to the project you want to explore and follow its individual README.
+Navigate to the project you want to explore and follow the instructions provided in its README.
 
-Some projects may require additional dependencies, model downloads, or API keys. Check the project documentation before running them.
+Some projects may require additional dependencies, model downloads, or API keys. Please check the individual project documentation before running them.
+
+For **BaseAgent**, use the dedicated repository linked above.
+
+---
+
+## 📂 Repository Structure
+
+```text
+Generative-AI-From-Fundamentals-to-Applications-Bootcamp-Projects/
+│
+├── MNIST_CNN_Classifier/
+│
+├── RAG_First_System_Lab/
+│   └── mnt/
+│       └── data/
+│           └── rag_lab/
+│
+├── StudyLens/
+│
+├── Transformer_Playground/
+│
+├── README.md
+└── LICENSE
+```
+
+> **BaseAgent** is maintained as a separate repository because it is a standalone project.
 
 ---
 
 ## 🎓 About the Bootcamp
 
-**Generative AI: From Fundamentals to Applications** is a hands-on bootcamp focused on taking participants from foundational concepts to building practical AI applications.
+**Generative AI: From Fundamentals to Applications** is a hands-on bootcamp designed to take participants from foundational AI concepts to building practical Generative AI applications.
 
-This repository contains the **projects and practical implementations** developed during the bootcamp.
+This repository contains the **practical projects and hands-on labs** developed during the bootcamp.
 
-The training materials and presentation content are intentionally not included in this repository.
-
----
-
-## 👩🏻‍💻 Instructor
-
-**Eng. Reem Algethami**
-
-Computer Engineer & Technical Trainer specializing in **Artificial Intelligence and Robotics**.
-
-[GitHub](https://github.com/EngReem85)
+Training materials, presentations, and other instructional content are intentionally not included in this repository.
 
 ---
 
-## 📄 License
 
-This repository is licensed under the [MIT License](./LICENSE).
-
----
-
-⭐ Explore the projects, experiment with the implementations, and build on them.
