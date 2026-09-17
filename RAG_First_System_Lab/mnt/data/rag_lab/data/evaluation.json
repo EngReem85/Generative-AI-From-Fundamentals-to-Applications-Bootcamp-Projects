@@ -1,0 +1,58 @@
+[
+  {
+    "id": "easy_01",
+    "type": "easy",
+    "question": "How long is the standard AI Lab session?",
+    "expected_sources": ["AI_Lab_Handbook.md"],
+    "expect_abstain": false
+  },
+  {
+    "id": "normal_01",
+    "type": "normal",
+    "question": "What are the requirements for a project prototype?",
+    "expected_sources": ["Project_Guidelines.md"],
+    "expect_abstain": false
+  },
+  {
+    "id": "ambiguous_01",
+    "type": "ambiguous",
+    "question": "What is the GPU allowance?",
+    "expected_sources": ["Computing_Policy_2026.md"],
+    "expect_abstain": false
+  },
+  {
+    "id": "multi_01",
+    "type": "multi-part",
+    "question": "How long is the final project presentation, and what are the main evaluation criteria?",
+    "expected_sources": ["Project_Guidelines.md"],
+    "expect_abstain": false
+  },
+  {
+    "id": "missing_01",
+    "type": "missing information",
+    "question": "What is the cafeteria menu on Fridays?",
+    "expected_sources": [],
+    "expect_abstain": true
+  },
+  {
+    "id": "outdated_01",
+    "type": "outdated information",
+    "question": "Under the 2025 policy, how many shared GPU hours were allowed per week?",
+    "expected_sources": ["Computing_Policy_2025.md"],
+    "expect_abstain": false
+  },
+  {
+    "id": "irrelevant_01",
+    "type": "irrelevant",
+    "question": "Who won the football World Cup in 2022?",
+    "expected_sources": [],
+    "expect_abstain": true
+  },
+  {
+    "id": "current_01",
+    "type": "normal",
+    "question": "What is the current shared GPU allowance in the 2026 policy?",
+    "expected_sources": ["Computing_Policy_2026.md"],
+    "expect_abstain": false
+  }
+]
