@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StudyLens AI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+
+  <header>
+    <div class="brand"><span class="lens-dot"></span> StudyLens AI</div>
+    <p>صوّر أي صفحة تعليمية — كتاب، محاضرة، رسم بياني، معادلة، جدول أو مخطط — وخلّها توضح لك نفسها.</p>
+    <span class="badge">يعمل بالكامل محلياً عبر Ollama — بدون إنترنت وبدون أي مفتاح API</span>
+  </header>
+
+  <div id="upload-section">
+    <div class="viewfinder" id="dropzone">
+      <span class="corner tl"></span><span class="corner tr"></span>
+      <span class="corner bl"></span><span class="corner br"></span>
+      <span class="scan-icon">🔎</span>
+      <h2>وضّح الصفحة داخل الإطار</h2>
+      <p class="hint">التقط صورة بالكاميرا أو ارفعها من الجهاز، أو اسحبها وأفلتها هنا</p>
+      <div class="upload-buttons">
+        <button class="btn btn-primary" id="camera-btn">📷 التقط صورة</button>
+        <button class="btn btn-outline" id="gallery-btn">🖼️ ارفع من الجهاز</button>
+      </div>
+      <input type="file" id="camera-input" accept="image/*" capture="environment">
+      <input type="file" id="gallery-input" accept="image/*">
+    </div>
+  </div>
+
+  <div id="preview-wrap">
+    <div class="preview-card">
+      <img id="preview-img" alt="الصورة المرفوعة">
+      <div class="preview-status">
+        <div class="title" id="preview-title">جارٍ التحليل<span class="spinner"></span></div>
+        <div class="sub" id="preview-sub">نقرأ محتوى الصفحة ونجهّز الشرح...</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="error-container"></div>
+
+  <div id="analysis-section">
+    <div class="type-row">
+      <span class="type-pill" id="type-pill">📄 نوع المحتوى</span>
+      <button class="btn btn-ghost" id="reset-btn">تحليل صورة جديدة</button>
+    </div>
+    <div class="ruled">
+      <div class="study-card">
+        <h3><span class="mark mark-amber"></span>الملخص</h3>
+        <p id="out-summary"></p>
+      </div>
+      <div class="study-card">
+        <h3><span class="mark mark-teal"></span>المفاهيم الأساسية</h3>
+        <div class="chip-list" id="out-concepts"></div>
+      </div>
+      <div class="study-card">
+        <h3><span class="mark mark-rust"></span>المصطلحات المهمة</h3>
+        <div id="out-terms"></div>
+      </div>
+      <div class="study-card">
+        <h3><span class="mark mark-amber"></span>الشرح</h3>
+        <p id="out-explanation"></p>
+      </div>
+      <div class="study-card">
+        <h3><span class="mark mark-teal"></span>أسئلة للمراجعة</h3>
+        <ol class="q-list" id="out-questions"></ol>
+      </div>
+    </div>
+  </div>
+
+  <div id="quick-actions">
+    <div class="label">أو جرّب:</div>
+    <div class="quick-grid">
+      <button class="quick-chip" data-q="اشرح لي الرسم أو المخطط الموجود في الصورة بالتفصيل.">اشرح الرسم</button>
+      <button class="quick-chip" data-q="وش العلاقة بين المتغيرات الظاهرة في الصورة؟">العلاقة بين المتغيرات</button>
+      <button class="quick-chip" data-q="حوّل الجدول الموجود في الصورة إلى مقارنة واضحة بين عناصره.">حوّل الجدول إلى مقارنة</button>
+      <button class="quick-chip" data-q="اختبرني في محتوى هذه الصفحة. اسألني سؤالاً واحداً فقط، وانتظر إجابتي، ثم قيّمها قبل الانتقال للسؤال التالي.">اختبرني في الصفحة</button>
+    </div>
+  </div>
+
+  <div id="chat-section">
+    <div class="chat-title">اسأل عن الصفحة</div>
+    <div id="chat-log"></div>
+    <form class="chat-input-row" id="chat-form">
+      <input type="text" id="chat-input" placeholder="اكتب سؤالك هنا..." autocomplete="off">
+      <button type="submit" id="chat-send">إرسال</button>
+    </form>
+  </div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>
